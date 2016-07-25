@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if shape %}
+    <title>{{ shape.name }}</title>
+        {% csrf_token %}
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>{{ shape.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ shape.name }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ shape.description }}</td>
+        </tr>
+    </table>
+</body>
+    {% endif %}
+</html>

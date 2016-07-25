@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shape Listing</title>
+    {% csrf_token %}
+</head>
+<body>
+{% for o in shape_objects %}
+
+<a style="font-size: x-large" href="{% url 'objects:display_object' o.id %}">{{ o.name }}</a><br>
+
+{% endfor %}
+</body>
+</html>
